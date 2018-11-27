@@ -2,11 +2,24 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
+
+
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
 	<title>Medico</title>
 	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
+
+    <!-- Styles -->
+    {!! Html::style('css/app.css') !!}
 </head>
 <body>
 	<!-- Navegacion -->
@@ -34,7 +47,7 @@
 		</div>
 	</nav>
 	<main>
-        @yield('contenido')
+        @yield('content')
     </main>
 </body>
 </html>
