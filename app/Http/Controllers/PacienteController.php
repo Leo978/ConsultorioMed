@@ -52,9 +52,9 @@ class PacienteController extends Controller
      * @param  \App\odel  $odel
      * @return \Illuminate\Http\Response
      */
-    public function show(odel $odel)
+    public function show(Paciente $paciente)
     {
-        //
+        return view('pacientes.pacienteChow', compact('paciente'));
     }
 
     /**
@@ -75,7 +75,7 @@ class PacienteController extends Controller
      * @param  \App\odel  $odel
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, odel $odel)
+    public function update(Request $request, Paciente $paciente)
     {
         //
     }

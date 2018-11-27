@@ -12,28 +12,30 @@
                     @endif
                     <div class="form-group">
                         {!! Form::label('codigo', 'Codigo') !!}
-                        {!! Form::text('codigo', null, ['class' => 'form-control']); !!}
+                        {!! Form::text('codigo', null, ['class' => 'form-control', 'required']); !!}
                     </div>
                     <div class="form-group">
                         {!! Form::label('nombre', 'Nombre') !!}
-                        {!! Form::text('nombre', null, ['class' => 'form-control']); !!}
+                        {!! Form::text('nombre', null, ['class' => 'form-control', 'required']); !!}
                     </div>
                     <div class="form-group">
                         {!! Form::label('direccion', 'Direccion') !!}
-                        {!! Form::text('direccion', null, ['class' => 'form-control']); !!}
+                        {!! Form::text('direccion', null, ['class' => 'form-control', 'required']); !!}
                     </div>
                     <div class="form-group">
                         {!! Form::label('num_tel', 'Telefono') !!}
-                        {!! Form::text('num_tel', null, ['class' => 'form-control']); !!}
+                        {!! Form::text('num_tel', null, ['class' => 'form-control', 'required']); !!}
                     </div>
                     <div class="form-group">
                         {!! Form::label('edad', 'Edad') !!}
-                        {!! Form::text('edad', null, ['class' => 'form-control']); !!}
+                        {!! Form::text('edad', null, ['class' => 'form-control', 'required']); !!}
                     </div>
                     <div class="tile-footer">
                         <button class="btn btn-primary" type="submit">Aceptar</button>
                     </div>
                     {!! Form::close() !!}
+                    <br><br>
+                    <a class="btn btn-sm btn-primary" href="{{ route('pacientes.index') }}"> Atras </a>
                 </div>
             </div>
         </div>
