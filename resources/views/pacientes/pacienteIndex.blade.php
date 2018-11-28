@@ -1,6 +1,9 @@
 @extends('layouts.app')
 @section('content')
 <div class="content">
+    <h2 class="section-heading mb-4">
+        <span class="section-heading-upper">Datos -> (falsos)</span>
+    </h2>
     <div class="row">
         <div class="col col-md-6 col-md-offset-3">
             <div class="panel panel-default">
@@ -35,7 +38,7 @@
 @endsection
 
 {{--
-    @extends('layouts.app')
+@extends('layouts.app')
 @section('content')
 <div class="content">
     <div class="row">

@@ -12,11 +12,13 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('inicio');
 });
 
 Auth::routes();
 
 Route::resource('pacientes', 'PacienteController');
+
+Route::resource('doctors', 'DoctorController');
 
 Route::get('/home', 'HomeController@index')->name('home');
