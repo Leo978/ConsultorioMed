@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-	<h1>LEO</h1>
-</body>
-</html>
+@extends('layouts.theme')
+@section('contenido')
+<h1>HOLA</h1>
+@endsection

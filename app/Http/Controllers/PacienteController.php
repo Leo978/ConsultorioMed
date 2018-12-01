@@ -21,7 +21,7 @@ class PacienteController extends Controller
     {
         return view('pacientes.pacienteIndex');
         $paciente = Paciente::all();
-        return view('pacientes.pacienteIndex', compact('paciente'));
+        return view('pacientes.pacienteIndex', compact('pacientes'));
     }
 
     /**

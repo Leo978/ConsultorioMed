@@ -18,7 +18,9 @@
                     </thead>
                     <tbody>
                     	<tr>
-                    		<td>1</td>
+                    		<td>
+                                <a class="btn btn-sm btn-primary" href="{{ route('doctors.create') }}">1</a>
+                            </td>
                             <td>216790559</td>
                             <td>Leonardo sebastian ramirez esqueda</td>
                             <td>16 de septiembre</td>
@@ -26,7 +28,9 @@
                             <td>21</td>
                         </tr>
                         <tr>
-                        	<td>2</td>
+                        	<td>
+                                <a class="btn btn-sm btn-primary" href="#">2</a>
+                            </td>
                             <td>123456789</td>
                             <td>diego ramirez esqueda</td>
                             <td>av. paraiso</td>

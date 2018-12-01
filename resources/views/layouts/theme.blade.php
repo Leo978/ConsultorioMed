@@ -24,6 +24,18 @@
 
   <body>
 
+    <nav class="navbar navbar-expand-lg navbar-dark static-top">
+    <div class="container">
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="{{ url('/') }}">Salir</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
     <h1 class="site-heading text-center text-white d-none d-lg-block">
       <span class="site-heading-upper text-primary mb-3">Consultorio Medico</span>
       <span class="site-heading-lower">El Enfermito</span>
