@@ -21,11 +21,11 @@
                                     <td>
                                         
                                     </td>
-                                    <td>{{ $pacientes->codigo }}</td>
-                                    <td>{{ $pacientes->nombre }}</td>
-                                    <td>{{ $pacientes->direccion }}</td>
-                                    <td>{{ $pacientes->num_tel }}</td>
-                                    <td>{{ $pacientes->edad }}</td>
+                                    <td>{{ $paciente->codigo }}</td>
+                                    <td>{{ $paciente->nombre }}</td>
+                                    <td>{{ $paciente->direccion }}</td>
+                                    <td>{{ $paciente->num_tel }}</td>
+                                    <td>{{ $paciente->edad }}</td>
                                 </tr>
                                 @endforeach
                             </tbody>
