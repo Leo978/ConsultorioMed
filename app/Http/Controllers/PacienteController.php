@@ -19,8 +19,11 @@ class PacienteController extends Controller
      */
     public function index()
     {
-        return view('pacientes.pacienteIndex');
-        $paciente = Paciente::all();
+        //$pacientes = Paciente::all();
+        //return view('pacientes.pacienteIndex', compact('pacientes'));
+
+        
+        $pacientes = Paciente::all();
         return view('pacientes.pacienteIndex', compact('pacientes'));
     }
 
@@ -42,6 +45,14 @@ class PacienteController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+          'codigo' => 'required',
+          'nombre' => 'required',
+          'direccion' => 'required',
+          'num_tel' => 'required',
+          'edad' => 'required'
+        ]);
+
         Paciente::create($request->all());
         return redirect()->route('pacientes.index');
     }
@@ -52,9 +63,14 @@ class PacienteController extends Controller
      * @param  \App\odel  $odel
      * @return \Illuminate\Http\Response
      */
-    public function show(Paciente $paciente)
+    public function show(Paciente $pacientum)
     {
-        return view('pacientes.pacienteChow', compact('paciente'));
+        /*return view('paciente.pacienteChop', conpact('pacientes'));*/
+        //$pacientes = Paciente::all->pluck('nombre', 'id')->toArray();
+//        $pacientes = Paciente::all()->pluck('id')->toArray();
+
+        return view('pacientes.pacienteShow')->with(['paciente' => $pacientum]);/*
+        return view('pacientes.pacienteShow', compact('pacienteso'));*/
     }
 
     /**
@@ -63,9 +79,9 @@ class PacienteController extends Controller
      * @param  \App\odel  $odel
      * @return \Illuminate\Http\Response
      */
-    public function edit(odel $odel)
+    public function edit(Paciente $pacientum)
     {
-        //
+        return view('pacientes.pacienteReg')->with(['paciente' => $pacientum]);
     }
 
     /**
@@ -75,9 +91,18 @@ class PacienteController extends Controller
      * @param  \App\odel  $odel
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Paciente $paciente)
+    public function update(Request $request, Paciente $pacientum)
     {
-        //
+        $request->validate([
+          'codigo' => 'required',
+          'nombre' => 'required',
+          'direccion' => 'required',
+          'num_tel' => 'required',
+          'edad' => 'required'
+        ]);
+        
+        Paciente::where('id', $pacientum->id)->update($request->except('_token', '_method'));
+        return redirect()->route('paciente.show', $pacientum->id);
     }
 
     /**
@@ -86,8 +111,9 @@ class PacienteController extends Controller
      * @param  \App\odel  $odel
      * @return \Illuminate\Http\Response
      */
-    public function destroy(odel $odel)
+    public function destroy(Paciente $pacientum)
     {
-        //
+        $pacienteso->delete();
+        return redirect()->route('paciente.index');
     }
 }

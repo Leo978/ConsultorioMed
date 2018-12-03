@@ -9,7 +9,8 @@ class DoctorController extends Controller
 {
     public function index()
     {
-    	return view('doctors.doctorIndex');
+    	$pacientes = Paciente::all();
+        return view('doctors.doctorIndex', compact('pacientes'));
     }
 
     public function create()

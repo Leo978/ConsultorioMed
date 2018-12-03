@@ -1,7 +1,7 @@
 @extends('layouts.theme')
 @section('contenido')
 <h2 class="section-heading mb-4">
-	<span class="section-heading-upper">Datos -> (falsos)</span>
+	<span class="section-heading-upper">Datos</span>
 </h2>
 <div class="row">
 	<div class="col col-md-12 col-md-offset-3">
@@ -17,26 +17,18 @@
                         <th>Edad</th>
                     </thead>
                     <tbody>
-                    	<tr>
-                    		<td>
-                                <a class="btn btn-sm btn-primary" href="{{ route('doctors.create') }}">1</a>
-                            </td>
-                            <td>216790559</td>
-                            <td>Leonardo sebastian ramirez esqueda</td>
-                            <td>16 de septiembre</td>
-                            <td>3311050221</td>
-                            <td>21</td>
-                        </tr>
+                        @foreach($pacientes as $paciente)
                         <tr>
-                        	<td>
-                                <a class="btn btn-sm btn-primary" href="#">2</a>
+                            <td>
+                                <a class="btn btn-sm btn-primary" href="#">{{ $paciente->id }}</a>
                             </td>
-                            <td>123456789</td>
-                            <td>diego ramirez esqueda</td>
-                            <td>av. paraiso</td>
-                            <td>3374128569</td>
-                            <td>19</td>
+                            <td>{{ $paciente->codigo }}</td>
+                            <td>{{ $paciente->nombre }}</td>
+                            <td>{{ $paciente->direccion }}</td>
+                            <td>{{ $paciente->num_tel }}</td>
+                            <td>{{ $paciente->edad }}</td>
                         </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>

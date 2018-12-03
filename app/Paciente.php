@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class paciente extends Model
 {
 	protected $fillable = ['codigo', 'nombre', 'direccion', 'num_tel', 'edad'];
-	public $timestamps = false;
+	//public $timestamps = false;
 
 	public function user()
 	{
